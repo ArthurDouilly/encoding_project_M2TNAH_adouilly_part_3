@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="nicolay_assignment.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="nicolay_assignment.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    
+    <!-- Below is the teiHeader, which contains the metadata on the transcript -->  
+    
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="fr">Testament de Marie-Elisabeth Nicolay; encoded from the transcript realized in 1873 by Arthur de Boislisle</title>
+                <author>Marie-Elisabeth Nicolay</author>
+                <editor>Arthur de Boislisle</editor>
+                <respStmt>
+                    <resp>encoded by</resp>
+                    <name>Arthur Douilly</name>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <distributor>Katarzyna Anna Kapitan</distributor>
+                <authority>École nationale des Chartes</authority>
+                <address>
+                    <addrLine>65 Rue de Richelieu, 75002 Paris</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <bibl type="monography">
+                    <title>Histoire de la maison de Nicolay, T.1, pièce 479, p.502-504, 
+                        as scanned and made available through Gallica</title>
+                    <author>Arthur de Boislisle</author>
+                    <date from-iso="1873" to-iso="1875">1873-1875</date>
+                </bibl>
+                <!-- Below are listed references to the persons, organizations and places mentioned in the document, alongside additional information and suppositions
+                Each element is given its reference with 'xml:id' which can then be referenced in the document to help with reading and for encoding use -->
+                <listPlace>
+                    <place xml:id="GOU">
+                        <placeName>Goussainville</placeName>
+                        <note>Main fiefdom of the Nicolay, located in the north of Paris</note>
+                    </place>
+                    <place xml:id="VIL">
+                        <placeName>Villaines</placeName>
+                    </place> 
+                    <place xml:id="MIG">
+                        <placeName>Mignaux</placeName>
+                    </place>           
+                    <place xml:id="STP">
+                        <placeName>paroisse de Saint Paul</placeName>
+                        <note>Nowadays known as Saint-Paul Saint-Louis, located in the 4th arrondissement.</note>
+                    </place>
+                    <place xml:id="ROY">
+                        <placeName>Place Royale</placeName>
+                        <note>Nowadays Place de la Concorde</note>
+                    </place>
+                    <place xml:id="OSN">
+                        <placeName>Osny</placeName>
+                        <note cert="medium">One of the fiefdoms of the Nicolay, most likely located in the north of Paris. Could be the current day Osny, which is located near Cergy-Pontoise.</note>
+                    </place>
+                </listPlace>
+                <listOrg>
+                    <org xml:id="CAT">
+                        <orgName>Église catholique</orgName>
+                        <note>The Church as an institution, as led by the Pope in Rome. The Nicolay had a 'ultramontain' leaning in the 18th century, that is to say they followed roman rites in opposition to the french 'gallican' rites.</note>
+                    </org>
+                    <org xml:id="AVE">
+                        <orgName>Dames de l'Ave Maria</orgName>
+                        <note>A franciscan convent located in what is in the present day the 4th arrondissement of Paris</note>                           
+                    </org>
+                    <org xml:id="PMN">
+                        <orgName>Pères minimes</orgName>
+                        <note>One of the lesser known mendicant orders, founded in the 15th century in Italy</note>                           
+                    </org>
+                    <org xml:id="PAR_GOU">
+                        <orgName>Paroisse de Goussainville</orgName>
+                        <note>The parish of the Nicolays' main fiefdom</note>                           
+                    </org>
+                </listOrg>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <projectDesc>
+                <p>This file has been encoded as part of an assignment for the TEI-XML class in the 2nd year of the TNAH MD at Ecole des Chartes, in France. It is one of three files which will be encoded in this manner, all of which are testaments which I have sampled from my research project on the Nicolay family of robe nobility in Paris in the 18th-19th centuries that I have realized at Paris-Nanterre university in 2018-2019.
+                </p>
+            </projectDesc>
+            <samplingDecl>
+                <p>Due to the limit of characters imposed by this exercise in encoding, I have limited myself only to the first part of each testament. As such, the samples mostly contain the will and the declaration of the authors, and especially, where present, the invocation to religious figures.
+                </p>
+            </samplingDecl>
+            <editorialDecl>
+                <p>This testament has been transcribed and editorialized by french archivist Arthur de Boislisle in 1873, as part of a history of the Nicolay family that he realized for said family. Parts of this document have been cut short and summarized as part of this editorial process. I have seen fit to note such parts in an effort to underline the specific state of this testament.
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <revisionDesc>
+            <change when="2025-10-16">Encoded first version of the text as an example of the DTD.</change>
+            <change when="2025-12-21">Encoded second version with TEI-ALL for the final assignment</change>
+            <change when="2025-12-29">Switched to custom RNG schema for the final assignment</change>
+        </revisionDesc>
+    </teiHeader>
+    
+    <!-- Below is the text, which contains the encoded transcript -->
+    
+    <text>
+        <body>
+            <div type="protocol" xml:id="proto">
+                <head>
+                    <add source="editorialization by Boislisle">
+                        <date when="1708-01-02">2 janvier 1708</date>,<date from-iso="1708-02-14" to-iso="1708-02-18">14 et 18 février 1708</date>
+                        Testament de Marie-Elisabeth Nicolay
+                    </add>
+                </head>
+                <opener>
+                    Au nom de la très sainte <name type="religious_figure">Trinité, le Père, le Fils et le Saint Esprit.</name>
+                </opener>
+                <p>
+                    Je donne mon âme et mon coeur à <name type="religious_figure">Dieu</name>. J’abandonne volontiers les biens de ce monde, qui ne sont que vanitez, et dont je ne me suis que trop servy à cet usage. Je m’en repens avec beaucoup de doulleurs, comm’ aussy de tous les péchez que j’ay commis pendant cette misérable vie. Je croy un seul <name type="religious_figure">Dieu, mon créateur et mon rédempteur</name>, et tout ce que <orgName ref="#CAT">l’Eglise catholique, apostolique et romaine</orgName> croy. Je recommande mon âme aux intercessions de la glorieuse <name type="religious_figure">vierge Marie</name> et de <name type="religious_figure">sainte Elizabeth</name>, mes patronnes, et à celles de mon <name type="religious_figure">ange gardien</name>, de <name type="religious_figure">saint Joseph</name> et de tous <name type="religious_figure">les saints et saintes</name> qui jouissent du bonheur que j’espère par leur assistance, que je les prie dès à présent de ne me pas refuser à l’heure de ma mort. Je dis avec un profond respect les noms de <name type="religious_figure">Jésus</name> et de <name type="religious_figure">Marie</name>, que je souhaite pouvoir prononcer avec connoissance au dernier moment de ma vie.
+                </p>
+                <p>
+                    Cecy est mon testament, que je veux et ordonne qui soit exécutté dans toutte sa teneur comme il s’ensuit :
+                </p>
+            </div>
+            <div type="body_text" subtype="burial_specifications" xml:id="bt01">
+                <p>
+                    Premièrement, <eventName type="burial">je veux être enterrée auprès du corps de mon très cher et très honoré père</eventName>, dans la <placeName ref="#GOU">cave de Goussainville</placeName>, et que l’on fasse dire dans l’église de ce lieu un <eventName type="mass">service</eventName> <num value="1" type="frequency" subtype="years">annuel</num> pour le repos de mon âme. Je laisse pour cela trois cens livres. <eventName type="burial">Je veux que l’on me fasse un service sans aucune tenture ny cérémonies</eventName>, dans la paroisse sur laquelle je mourray, soit <placeName>à Paris</placeName> ou à la campagne. <eventName type="burial">Je veux que cent pauvres y assistent, moitié filles et moitié garçons : on donnera à chacun de ses pauvres enfans trois livres, et on leur dira de prier Dieu pour moy</eventName>.
+                </p>
+            </div>
+            <div type="body_text" subtype="religious_demands" xml:id="bt02">
+                <p source="summary added by Boislisle"> <!-- This part is a summary and thus not written as is in the original document. -->
+                    [Legs : <objectName type="money">250 l.</objectName> aux <name type="organization">Hospitalières</name> de la <placeName>place Royale</placeName>, pour dire <eventName type="mass">250 messes</eventName>, et autant à l’<name type="organization">Ave-Maria</name> ; <objectName type="money">500 l.</objectName> à <name type="organization">l’église</name> de <placeName ref="#GOU">Goussainville</placeName> pour <eventName type="mass">célébrer à perpétuité, le 20 février, l’anniversaire de la mort du père de la testatrice</eventName> ; <objectName type="money">500 l. aux pauvres malades</objectName> de <placeName ref="#GOU">Goussainville</placeName>, <objectName type="money">300 l. à ceux</objectName> d’<placeName>Ivors</placeName>, et autant à ceux de <placeName ref="#VIL">Villaines</placeName> et <placeName ref="#MIG">Mignaux</placeName> ; aux <name type="organization">dames de Sainte-Marie</name> de la <placeName>rue Saint-Jacques</placeName>, <objectName type="furniture">tous les meubles de l’appartement qu’elle occupe dans leur maison</objectName>; <objectName type="money">1,000 l.</objectName> à l’<name type="organization">Hôtel-Dieu</name>, autant à l’<name type="organization">Hôpital-Général</name> ; <objectName type="money">500 l.</objectName> pour <eventName type="charity">délivrer quelques prisonniers pour dettes</eventName> ; <objectName type="money">1,500 l.</objectName> aux <name type="organization">Hospitalières</name> de la <placeName ref="#ROY">place Royale</placeName> ; <objectName type="money">200 l.</objectName> aux <name type="organization">Anglaises</name> du <placeName>faubourg Saint-Antoine</placeName> ; <objectName type="money">1,000 l. aux pauvres</objectName> de <name type="organization">sa paroisse</name>, autant à la <name type="organization">Marmite des malades</name>, et <objectName type="money">200 l. pour les pauvres veuves et filles</objectName> de la <placeName>rue de Reuilly</placeName> dont elle prend soin depuis longtemps.]
+                </p>
+            </div>
+            <spanGrp>
+                <span target="proto">The protocol is very long here, with an especially baroque invocation typical of 17th century testaments. Furthermore, an addition by Boislisle has added a title and a date for the printed version.</span>
+                <span target="bt01">The burial specifications are split between the demands for simplicity characteristic of the Nicolay and the baroque demand to have poor children pray for one's salvation in exchange for money</span>
+                <span target="#bt02">This part has been significantly cut down and summarized into a list of demands by Boislisle. We can note a great amount of donations to regular clergy and charity organizations.</span>
+            </spanGrp>
+        </body>
+    </text>
+    
+</TEI>

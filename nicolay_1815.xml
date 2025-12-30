@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="nicolay_assignment.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="nicolay_assignment.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="fr"> Premier codicille adjoint au testament de Mme Potier de
+                    Novion, veuve d’Aymard Charles Marie de Nicolaï, daté du <date when="1814-10-05"
+                        >5 octobre 1814</date>. </title>
+                <author role="testator" xml:lang="fr" ref="#NOV">Philippine Léontine Potier de Novion, veuve
+                    Nicolay</author>
+                <respStmt>
+                    <resp>encoded by</resp>
+                    <persName>Arthur Douilly</persName>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <distributor>Katarzyna Anna Kapitan</distributor>
+                <authority>École nationale des Chartes</authority>
+                <address>
+                    <addrLine>65 Rue de Richelieu, 75002 Paris</addrLine>
+                </address>
+            </publicationStmt>
+            <sourceDesc>
+                <!-- The msDesc element allows to describe some specificities of the physical document as well as its ID and localization -->
+                <msDesc>
+                    <msIdentifier>
+                        <country>France</country>
+                        <settlement>Paris</settlement>
+                        <institution>Archives nationales</institution>
+                        <repository>Minutier Central</repository>
+                        <idno>MC/ET/XII/869</idno>
+                        <msName xml:lang="fr">Testament et codicilles de Mme Potier de Novion, veuve
+                            d'Aymard Charles Marie de Nicolaï</msName>
+                    </msIdentifier>
+                    <msContents>
+                        <summary>The testament of Philippine Léontine Potier de Novion, widow of
+                            Aymard Charles Marie de Nicolaï, former first president of the Chambre
+                            des Comptes de Paris (died 1794). Handwritten holograph testament on
+                            paper.</summary>
+                    </msContents>
+                    <!-- physDesc allows to describe the support. This description remains very limited here -->
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>Paper</support>
+                            </supportDesc>
+                        </objectDesc>
+                    </physDesc>
+                </msDesc>
+                <!-- Below are listed references to the persons, organizations and places mentioned in the document, alongside additional information and suppositions
+                Each element is given its reference with 'xml:id' which can then be referenced in the document to help with reading and for encoding use -->
+                <listPerson>
+                    <person xml:id="NOV">
+                        <persName>Philippine Léontine Potier de Novion</persName>
+                        <affiliation xml:lang="ENG">Wife of Aymard Charles Marie de
+                            Nicolay</affiliation>
+                        <note>The Potier de Novion family was a family of high robe nobility,
+                            traditionally first presidents in the Parliament of Paris</note>
+                    </person>
+                    <person xml:id="CHA">
+                        <persName>Aymard Charles Marie de Nicolay</persName>
+                        <affiliation xml:lang="FRA">Premier président de la Chambre des comptes de
+                            Paris</affiliation>
+                        <affiliation xml:lang="ENG">First president of the court of auditors of
+                            Paris</affiliation>
+                        <note>Fourth son of Aimar Jean and third to inherit. Has inherited the
+                            familial office in the 1770s, following the retirement of his father.
+                            Executed in 1794.</note>
+                    </person>
+                    <person xml:id="CUR_COU">
+                        <persName>Curé de Courances</persName>
+                        <affiliation xml:lang="ENG">clergy</affiliation>
+                        <note>Head of the parish of Courances, fiefdom of the Potier de Novion
+                            family</note>
+                    </person>
+                    <person xml:id="CUR_SLP">
+                        <persName>Curé de Saint-Sulpice</persName>
+                        <affiliation xml:lang="ENG">clergy</affiliation>
+                        <note>Head of the parish of Saint-Sulpice in which Léontine-Philippine Potier de Novion lived at the time of writing.</note>
+                    </person>
+                </listPerson>
+                <listPlace>
+                    <place xml:id="COU">
+                        <placeName>Courances</placeName>
+                        <note cert="high">One of the fiefdoms attached to the Potier de Novion
+                            family, where their manor was located. Courances is located in Essonne
+                            near Evry nowadays.</note>
+                    </place>
+                    <place xml:id="PRC">
+                        <placeName>Paris, Rue de la Chaise n°10</placeName>
+                        <note cert="high">The place where Philippine-Léontine lived at the end of
+                            her life. It is located in the 7th arrondissement.</note>
+                    </place>
+                </listPlace>
+                <listOrg>
+                    <org xml:id="PAR_COU">
+                        <orgName>Paroisse de Courances</orgName>
+                        <note>The parish of Courances. In the text, Potier de Novion differenciates
+                            between the "fabrique", which grouped the rich parisioners who managed
+                            the finances of the parish, from the church and the priest. However both
+                            are in practice the same institution.</note>
+                    </org>
+                    <org xml:id="PAR_SLP">
+                        <orgName>Paroisse de Saint-Sulpice</orgName>
+                        <note cert="medium">Rue de la Chaise is located within the boundaries of the parish of Saint-Sulpice on the left bank of the Seine, and as such is likely the parish mentioned in the testament.</note>
+                    </org>
+                </listOrg>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+   
+            <div type="protocol" xml:id="proto">
+                <!-- The use of divs allows to separate the document into chunks following diplomatics methods -->
+                <opener> Au nom du <name type="religious_figure">Fils, du Père et du
+                        Saint-Esprit</name> Ainsi Soit-il</opener>
+                <p n="1">Je soussignée <persName ref="#NOV">Philippine Léontine Potier de
+                        Novion</persName>, veuve de <persName ref="#CHA">Aymard Charles Marie de
+                        Nicolay</persName>, demeurant de droit à la Commune de
+                        <placeName ref="#COU">Courances</placeName> et de fait à <placeName ref="#PRC">Paris Rue de la
+                        Chaise n°10</placeName>.</p>
+                <!-- Paragraphs are numbered within the div -->
+                <p n="2">Pour les mêmes raisons que celles insérées dans <objectName type="testament">mon
+                        testament</objectName> concernant le partage de mes biens que j’ai fait
+                    entre mes enfants et mes petits enfants en date du <date when="1812-08-13"
+                        >treize août mille huit cents douze</date>, auquel je n’entends déroger,
+                    voulant au contraire qu’il soit exécuté dans tout son contenu, j’ai voulu faire
+                    connaître à mes enfants et petits enfants mes dernières volontés que j’ai
+                    rédigées ci-écrites de ma main.</p>
+                <p n="3">Je recommande, comme je l’ai fait, par mon testament mon âme à <name
+                        type="religious_figure">Dieu</name>.</p>
+            </div>
+            
+            <div type="body_text" subtype="burial_specifications" xml:id="bt01">
+                <p n="1">Je veux que mon corps soit transporté à ma terre de
+                        <placeName ref="#COU">Courances</placeName> pour y être inhumé. Je veux que
+                        <eventName type="burial">mes funérailles</eventName> soient faites avec la plus grande
+                    simplicité, et qu’il soit célébré, mon corps présent, dans l’église de la
+                    Paroisse de Courances, une grande messe pour le repos de mon âme.</p>
+            </div>
+            
+            <div type="body_text" subtype="religious_demands" xml:id="bt02">
+                <p n="1">Je charge mes enfants et petits enfants de distribuer ou faire distribuer
+                    une somme de <num value="1500">mille cinq cent</num>
+                    <objectName type="money">francs</objectName> aux pauvres les plus nécessiteux de la
+                        <orgName ref="#PAR_SLP">Paroisse sur laquelle je demeurai à Paris lors de mon
+                            décès</orgName>. Je les invite à consulter <persName ref="#CUR_SLP">Monsieur le Curé de cette
+                        Paroisse</persName> pour faire la distribution de cette somme, afin de mieux
+                    connaître, s’il se peut, ceux qui ont le plus besoin de secours.</p>
+                <p n="2">Je veux aussi que mes enfants et petits enfants donnent à la
+                        <orgName ref="#PAR_COU">fabrique de Courances</orgName> une
+                        <objectName type="religious">inscription</objectName> sur l’état du revenu de
+                        <num value="50">cinquante</num>
+                    <objectName type="money">francs annuels</objectName>. Je donne cette
+                        <objectName type="religious">inscription</objectName> à ladite <orgName ref="#PAR_COU">fabrique</orgName> à
+                    la charge par elle de faire célébrer tous les ans dans l’église de la
+                        <placeName ref="#COU">Commune de Courances</placeName> une <eventName type="mass">messe
+                        basse</eventName> (le quantième qui correspondra autant que se pourra à la
+                    date de mon décès) pour le repos de mon âme.</p>
+            </div>
+            
+            <div type="body_text" subtype="pensions" xml:id="bt03">
+                <p n="1">Je veux que les <objectName type="pension">pensions viagères</objectName> que je viens de
+                    faire soient payées de <num value="6" type="frequency" subtype="months">six en six mois</num> à compter du jour de mon décès. Que
+                    toutes soient exemptes de la retenue des Impositions, et que les droits auxquels
+                    les pensions et legs que je viens de faire soient à la charge de ma succession.
+                    Je veux de plus que lesdites pensions viagères soient incessibles et non
+                    imposable.</p>
+            </div>
+            
+            <div type="eschatocol" xml:id="escha">
+                <p n="1">Je n’entends par le présent Codicille déroger à mon testament du <date
+                        when="1812-08-13">treize août mille huit cents douze</date>. Voulant qu’il
+                    soit exécuté ainsi que le présent en tout leur contenu comme étant mes
+                    intentions et dernières volontés.</p>
+                <closer>Fait ci <eventName>rédigé le présent</eventName> que j’ai écrit de ma main
+                    sur une feuille de papier timbré contenant quatre pages, que j’ai cotées et
+                    signées par première et dernière. Fait à <placeName>Paris Rue de la Chaise
+                        n°10</placeName> ce <date when="1814-10-05">cinq octobre mille huit cents
+                        quatorze</date>.</closer>
+                <signed>Potier de Nicolay</signed>
+            </div>
+            
+            <!-- End of the text excerpt being encoded. The section below contains only annotations which help form the skeleton of a critical apparatus -->
+            
+            <spanGrp> <!-- I hesitated between span and interp here -->
+                <span target="proto">This document is identified as a "codicille", an addition upon her previous testament written in 1812. The religious invocation is sparse and in line with the simpler testaments of the late 18th century, but remains written personally like other Nicolay testaments.</span>
+                <span target="#bt01">Burial specifications in line with other Nicolay testaments, with an insistance on "simplicity" for the funeral</span>
+                <span target="#bt02">Potier de Novion adds two demands here, one to have her heirs distribute money in her parish of Paris; the other to have them purchase an inscription in her parish of Courances, where she is the landowner. Again, in line with Nicolay practices, although the amount of masses being demanded has lowered significantly.</span>
+                <span target="#bt03">In this paragraph Potier de Novion specifies the manner in which the pensions which she demands be set up by her heirs ought to work, specifically by making them biyearly, free of charge, and non-resellable.</span>
+                <span target="#escha">Potier de Novion signs off by noting how the document was written and specifying that this does not void her previous testament.</span>
+            </spanGrp>
+        </body>
+    </text>
+</TEI>
