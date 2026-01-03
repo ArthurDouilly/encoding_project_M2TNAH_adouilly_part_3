@@ -12,10 +12,15 @@
             </respStmt>
          </titleStmt>
          <publicationStmt>
-            <p>This ODD file has been originally generated through the use of the 'oddbyexample.xsl' transformation scheme as part of the final assignment of the XML-TEI class in the 2nd year TNAH program at École nationale des Chartes. It has received subsequent modifications according to the assigment specifications and needs of the files encoded with the RNG scheme which has been derived from it. All changes to the default TEI-all will be denoted with the [Note Change!] signal in the description.</p> <!-- Description of the assigment and how the ODD file was made -->
+            <p>
+               This ODD file has been originally generated through the use of the 'oddbyexample.xsl' transformation scheme as part of the final assignment of the XML-TEI class in the 2nd year TNAH program at École nationale des Chartes. It has received subsequent modifications according to the assigment specifications and needs of the files encoded with the RNG scheme which has been derived from it. All changes to the default TEI-all will be denoted with the [Note Change!] signal in the description.
+            </p> <!-- Description of the assigment and how the ODD file was made -->
             <p>
                The ODD file and its derived files (RNG and HTML respectively) are part of a project to encode three samples taken from the incipit of testaments from the Nicolay family which were written between 1708 and 1815. The interest of this work was to see how encoding would be used to schematize the structure of a testament, both to show off how remarkably similar those documents were even a century from one another, and how the content beyond the form has evolved in between. In this third and final iteration, the objective was to use transformations to create a custom schema which could be used to encode in finer details and refine the TEI elements and attributes used for it.
             </p> <!-- General description of the project and the place the ODD file has in it -->
+            <p>
+               Several rules have been customized in order to allow for encoding particularities of my three samples : notably, the 'div' element has been heavily modified to structure its use, with mandatory type elements from a closed list (rule #1) and with a schematron rule (rule #3) mandating that @type = body_text divs must have a @subtype ; the 'body' element has been modified as well in order to mandate a sequence (#2) that div elements must be followed by a spanGrp element. Other rules have also been shifted and adapted with closed attribute value lists depending on needs due to there being two manuscript archives and one which was subsequently edited as part of a 19th century collection commissionned by the family.
+            </p>
          </publicationStmt>
          <sourceDesc>
             <p>Derived from <ref target="https://www.tei-c.org/Vault/P5/current/xml/tei/odd/p5subset.xml">base odd</ref> after an analysis of 1 files in /home/arthur/Documents/ENC/2025_2026_M2_ENC/2_travaux/encoding_project_XML/assignment_3</p>
@@ -166,6 +171,7 @@
                </attList>
             </elementSpec>
             <elementSpec ident="eventName" mode="change">
+               <desc>[Note Change!] Addition of a closed list of values for the @type attribute</desc>
                <attList>
                   <attDef ident="cert" mode="delete"/>
                   <attDef ident="when" mode="delete"/>
@@ -250,6 +256,7 @@
                </attList>
             </elementSpec>
             <elementSpec ident="objectName" mode="change">
+               <desc>[Note Change!] Addition of a closed list of values for the @type attribute</desc>
                <attList>
                   <attDef ident="cert" mode="delete"/>
                   <attDef ident="when" mode="delete"/>
@@ -614,12 +621,27 @@
                <content>
                   <elementRef key="span" maxOccurs="unbounded"/>
                </content>
+               <exemplum>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> <!-- Exemple of use from 'nicolay_1785.xml' -->
+                     <spanGrp>
+                        <span target="proto">An exceptionally short protocol, reduced to the absolute minimum declaration of intent.</span>
+                        <span target="#bt01">In keeping with above, the demands for burial are limited to one sentence and focus on the demand for great simplicity characteristic of the Nicolay</span>
+                        <span target="#bt02">This second part shows the lean of the family towards regular clergy, specifically from the mendicant orders and franciscans, as well as their local clergymen</span>
+                        <span target="#bt03">Finally this third part, limited in general to the donations within the close family, show off the riches and the order of succession.</span>
+                     </spanGrp>
+                  </egXML>
+               </exemplum>
             </elementSpec>
             <elementSpec ident="span" prefix="tei"> <!-- added 'prefix = tei' to specify the namespace of the element as it was clashing with another span element in the rng conversion -->
                <desc>[Note Change!] Changed the span element so that it must have a 'target' attribute.</desc>
                <attList>
                   <attDef ident="target" mode="change" usage="req"/>
                </attList>
+               <exemplum>
+                  <egXML xmlns="http://www.tei-c.org/ns/Examples"> <!-- Exemple from 'nicolay_1785.xml' -->
+                     [...] <objectName type="cutlery">ma tasse de [...] avec la soucoupe</objectName> ensemble <objectName type="jewelry">ma bague qui ferme un chiffre</objectName>.
+                  </egXML>
+               </exemplum>
             </elementSpec>
             <classRef key="att.linguistic"/>
             <classSpec ident="att.linguistic" type="atts" mode="change">
@@ -703,7 +725,7 @@
                </attList>
                <exemplum>
                   <egXML xmlns="http://www.tei-c.org/ns/Examples"> <!-- Exemple from 'nicolay_1815.xml' -->
-                     <div type="body_text" subtype="burial_specifications" xml:id="bt01">
+                     <div type="body_text" subtype="burial_specifications" xml:id="bt01"> <!-- Here you can see the @type and @subtype elements -->
                            <p n="1">Je veux que mon corps soit transporté à ma terre de
                               <placeName ref="#COU">Courances</placeName> pour y être inhumé...</p>
                      </div>
